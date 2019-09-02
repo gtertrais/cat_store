@@ -28,7 +28,20 @@
     
       <!--================ Hero Carousel end =================-->
       <!-- ================ trending product section start ================= -->  
-     
+      <section class="section-margin calc-60px">
+        <div class="container">
+          <div class="section-intro pb-60px">
+            <p>Popular Item in the market</p>
+            <h2>Trending <span class="section-intro__style">Product</span></h2>
+          </div>
+          <div class="row">
+              <% @items.each do |item| %>
+                <%= render 'shared/card', item: item %>
+             <% end %>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- ================ trending product section end ================= -->  
       <!-- ================ offer section start ================= --> 
       <!-- ================ offer section end ================= --> 
