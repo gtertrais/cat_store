@@ -35,12 +35,11 @@
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                   aria-expanded="false">Pages</a>
                 <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                  <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
-                  <li class="nav-item"><a class="nav-link" href="tracking-order.html">Tracking</a></li>
+                    <li class="nav-item"><%= link_to 'Login', new_user_session_path, class: "nav-link"  %></li>
+                    <li class="nav-item"><%= link_to 'registration', new_user_registration_path, class: "nav-link" %></li>
                 </ul>
               </li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="<%= static_pages_index_path %>">Account</a></li>
             </ul>
 
             <ul class="nav-shop">

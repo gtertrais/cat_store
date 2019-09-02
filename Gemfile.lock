@@ -214,13 +214,6 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-  dotenv-rails
->>>>>>> development
->>>>>>> development
   faker
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
@@ -231,10 +224,7 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
-<<<<<<< HEAD
-=======
   stripe
->>>>>>> development
   table_print
   turbolinks (~> 5)
   tzinfo-data
