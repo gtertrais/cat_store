@@ -14,7 +14,7 @@
  *= require_self
  *= require bootstrap/bootstrap.min
 
- *= require bootstrap/bootstrap.min.css
+
  *= require fontawesome/css/all.min.css
  *= require themify-icons/themify-icons.css
  *= require nice-select/nice-select.css
@@ -22,6 +22,7 @@
  *= require owl-carousel/owl.carousel.min.css
 
  *= require style.css
+ *= require main.css
  */
 
 
