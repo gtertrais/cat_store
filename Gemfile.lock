@@ -183,7 +183,10 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+<<<<<<< HEAD
+=======
     stripe (5.1.0)
+>>>>>>> development
     table_print (1.5.6)
     thor (0.20.3)
     thread_safe (0.3.6)
@@ -218,7 +221,10 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise
+<<<<<<< HEAD
+=======
   dotenv-rails
+>>>>>>> development
   faker
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
@@ -229,7 +235,10 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
+<<<<<<< HEAD
+=======
   stripe
+>>>>>>> development
   table_print
   turbolinks (~> 5)
   tzinfo-data

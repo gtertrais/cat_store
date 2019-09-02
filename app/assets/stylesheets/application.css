@@ -12,20 +12,14 @@
  *
  *= require_tree .
  *= require_self
+ 
  *= require bootstrap/bootstrap.min
-
-
- *= require fontawesome/css/all.min.css
- *= require themify-icons/themify-icons.css
- *= require nice-select/nice-select.css
- *= require owl-carousel/owl.theme.default.min.css
- *= require owl-carousel/owl.carousel.min.css
-
+ *= require fontawesome/css/all.min
+ *= require themify-icons/themify-icons
+ *= require nice-select/nice-select
+ *= require owl-carousel/owl.theme.default.min
+ *= require owl-carousel/owl.carousel.min
+ 
  *= require style.css
  *= require main.css
  */
-
-
-
-
-
