@@ -3,6 +3,8 @@ class Cart < ApplicationRecord
     has_many :cart_items
     has_many :items, through: :cart_items
 
+
+    
     def add_item(item_params)
         current_item = cart.item.find_by(item_id: item_params[:item][:item_id])
         if current_item
