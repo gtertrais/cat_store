@@ -30,7 +30,8 @@
                   <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                   <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
                 </ul>
-							</li>
+              </li>
+              
                <% if current_user == nil %>
 							<li class="nav-item submenu dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -41,10 +42,11 @@
                 </ul>
               </li>
               <% else %>
-              <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-item") %>  </li>
-              <li class="nav-item"><a class="nav-link" href="<%= static_pages_index_path %>">Account</a></li>
+              <li class="nav-item"><%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-link") %></li>
+              <li class="nav-item"><a class="nav-link" href="<%= show_user_path(current_user) %>">Account</a></li>
               <% end %>
             </ul>
+
             <ul class="nav-shop">
               <li class="nav-item"><button><i class="ti-search"></i></button></li>
               <li class="nav-item"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button> </li>
