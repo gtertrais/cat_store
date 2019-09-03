@@ -3,13 +3,16 @@ class CartItemsController < ApplicationController
   
   
   def create
-    @cart.add_item(params)
-     
-    if @cart.save
-      redirect_to cart_path
+    #@cart.add_item(params)
+    @cart = Cart.find(session[:cart_id])
+    @item = CartItem.create(cart_id: @cart.id, item_id: params[:format])
+
+    if @item.save    
+      redirect_to carts_path
     else
+    
       flash[:error] = 'There was a problem adding this item to your cart.'
-      redirect_to root_path
+      redirect_to edit_user_registration_path 
     end
   end
 
