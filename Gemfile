@@ -7,7 +7,7 @@ gem 'devise'
 gem 'table_print'
 gem 'stripe'
 gem 'font-awesome-rails'
-
+gem 'pry'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
