@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :cart_items
+  resources :carts
   root 'items#index'
   resources :items
   devise_for :users
