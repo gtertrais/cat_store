@@ -3,7 +3,6 @@ class CartItemsController < ApplicationController
   
   
   def create
-    #@cart.add_item(params)
     @cart = Cart.find(session[:cart_id])
     @item = CartItem.create(cart_id: @cart.id, item_id: params[:format])
 
@@ -19,8 +18,8 @@ class CartItemsController < ApplicationController
   # DELETE /cart_items/1
   # DELETE /cart_items/1.json
   def destroy
-    @cart_item.destroy
-    redirect_to cart_path
+    @item.delete(params)
+    redirect_to carts_path
   end
 
 end

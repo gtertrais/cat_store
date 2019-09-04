@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Carts</h1>
+<h1>Mon panier</h1>
 
 <table>
   <thead>
@@ -14,7 +14,7 @@
       <tr>
           <%= item.title %>
         <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Detruction!!', method: :destroy, data: { confirm: 'sur ou bien?' } %></td>
       </tr>
     <% end %>
   </tbody>
