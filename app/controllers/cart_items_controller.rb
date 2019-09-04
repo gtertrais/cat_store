@@ -1,24 +1,32 @@
 class CartItemsController < ApplicationController
-  before_action :set_cart, only: [:create, :destroy], :if => :signed_in?
-  
-  
-  def create
-    @cart = Cart.find(session[:cart_id])
-    @item = CartItem.create(cart_id: @cart.id, item_id: params[:format])
+  before_action :set_cart, only: [:create, :destroy]
 
-    if @item.save    
+  # GET /cart_items
+  # GET /cart_items.json
+  def index
+    @cart_items = CartItem.all
+  end
+
+
+   
+  def create
+    #@cart.add_item(params)
+    
+    @cart = Cart.find(session[:cart_id])
+    @cart_item = CartItem.create(cart_id: @cart.id, item_id: params[:format])
+    
+    if @cart_item.save    
       redirect_to carts_path
     else
     
       flash[:error] = 'There was a problem adding this item to your cart.'
-      redirect_to edit_user_registration_path 
+      redirect_to root_path 
     end
   end
 
-  # DELETE /cart_items/1
-  # DELETE /cart_items/1.json
   def destroy
-    @item.delete(params)
+    item = params[:id]
+   CartItem.destroy(item)
     redirect_to carts_path
   end
 

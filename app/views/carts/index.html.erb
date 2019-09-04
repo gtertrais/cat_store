@@ -10,16 +10,19 @@
   </thead>
 
   <tbody>
-    <% @items.each do |item| %>
+    <% total = 0 %>
+    <% @cart_items.each do |cart_item| %>
+    <% total = total + Item.find(cart_item.item_id).price %>
       <tr>
-          <%= item.title %>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Detruction!!', method: :destroy, data: { confirm: 'sur ou bien?' } %></td>
+          <%= Item.find(cart_item.item_id).title %>
+        <td><%= link_to 'Show', Item.find(cart_item.item_id) %></td>
+       <td><%= link_to 'Destroy', cart_item_path(cart_item), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+    <%= button_to "Payment #{total}€", carts_path, class: "btn btn-primary" %>
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Cart', new_cart_path %>
+
+
