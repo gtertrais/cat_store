@@ -62,7 +62,7 @@ class ItemsController < ApplicationController
   end
 
   private
-=begin  # Use callbacks to share common setup or constraints between actions.
+  # Use callbacks to share common setup or constraints between actions.
     def set_item
       @item = Item.find(params[:id])
     end
@@ -71,5 +71,5 @@ class ItemsController < ApplicationController
     def item_params
       params.require(:item).permit(:title, :description, :price, :image_url)
     end 
-=end
+
 end
