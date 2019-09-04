@@ -11,10 +11,11 @@ class CartItemsController < ApplicationController
    
   def create
     #@cart.add_item(params)
+    
     @cart = Cart.find(session[:cart_id])
-    @item = CartItem.create(cart_id: @cart.id, item_id: params[:format])
-
-    if @item.save    
+    @cart_item = CartItem.create(cart_id: @cart.id, item_id: params[:format])
+    
+    if @cart_item.save    
       redirect_to carts_path
     else
     
@@ -22,4 +23,11 @@ class CartItemsController < ApplicationController
       redirect_to root_path 
     end
   end
+
+  def destroy
+    item = params[:id]
+   CartItem.destroy(item)
+    redirect_to carts_path
+  end
+
 end
