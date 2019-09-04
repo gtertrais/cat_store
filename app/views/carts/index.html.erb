@@ -19,10 +19,29 @@
        <td><%= link_to 'Destroy', cart_item_path(cart_item), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-    <%= button_to "Payment #{total}€", carts_path, class: "btn btn-primary" %>
   </tbody>
 </table>
 
+<%= form_tag charges_path do %>
+  <article>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+    <label class="amount">
+      <span> Total: <%= total %>€ </span>
+
+    </label>
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="A month's subscription"
+          data-amount="<%= total * 100 %>"
+          data-currency="EUR"
+          data-locale="auto"></script>
+<% end %>
 
 
 

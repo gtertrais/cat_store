@@ -5,7 +5,12 @@ class CartsController < ApplicationController
   # GET /carts.json
   def index
     @cart_items = current_user.cart.cart_items
-    
+    current_user.cart.items.each do |i|
+      puts "#" * 100
+      puts i.price
+      puts "#" * 100
+    end
+
   end
 
   # GET /carts/1
